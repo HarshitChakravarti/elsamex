@@ -50,8 +50,8 @@ export default function RootLayout({
           <div className="hidden md:flex gap-8 items-center font-bold text-gray-800 text-sm uppercase tracking-wider">
             <a href="/" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Home</a>
             <a href="/about-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">About Us</a>
-            <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Projects</a>
-            <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Services</a>
+            <a href="/projects" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Projects</a>
+            <a href="/services" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Services</a>
             <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Career</a>
             <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Contact Us</a>
           </div>
@@ -128,6 +128,7 @@ export default function RootLayout({
               <ul className="space-y-4">
                 <li><a href="/" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Home</a></li>
                 <li><a href="/about-us" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> About us</a></li>
+                <li><a href="/projects" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Projects</a></li>
                 <li><a href="#" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Contact Us</a></li>
               </ul>
             </div>
