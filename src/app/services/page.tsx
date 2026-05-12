@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import ProjectsCarousel from "../components/ProjectsCarousel";
 
 const accordionData = [
   {
@@ -213,11 +214,12 @@ export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // 0 corresponds to the first item (Asset Maintenance)
 
   const clients = [
-    "Maple",
-    "NHIT",
     "National Highway Authority of India",
     "Ministry of Road Transport and Highways",
-    "RIDCOR"
+    "RIDCOR",
+    "Adani Road Transport Limited",
+    "Maple",
+    "NHIT"
   ];
 
   return (
@@ -335,57 +337,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Our Projects Section Divider (From Screenshot) */}
-      <section className="py-24 w-full bg-primary relative overflow-hidden">
-        <div className="px-4 md:px-[10%] flex justify-between items-end mb-12">
-          <div>
-            <h4 className="text-secondary font-bold uppercase tracking-wider text-sm mb-4">OUR PROJECTS</h4>
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">Works Showcase</h2>
-          </div>
-          <div className="flex gap-4">
-            <a href="/projects" className="hidden md:inline-flex items-center gap-2 border border-white/20 hover:border-white text-white font-medium py-3 px-8 transition-colors text-sm rounded-full">
-              View All <span>↗</span>
-            </a>
-            <button className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors text-xl">
-              &lt;
-            </button>
-            <button className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors text-xl">
-              &gt;
-            </button>
-          </div>
-        </div>
-
-        <div className="pl-4 md:pl-[10%] flex gap-6 overflow-x-auto hide-scrollbar pb-10">
-          
-          <div className="min-w-[400px] aspect-[4/3] bg-white flex items-end shadow-sm cursor-pointer p-8 relative">
-            <h3 className="text-black font-bold text-[22px] leading-tight z-10 bottom-6 left-6 absolute">Baleshwar-<br/>Kharagpur</h3>
-          </div>
-
-          <div className="min-w-[400px] aspect-[4/3] relative group cursor-pointer shadow-sm">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects2.jpg" fill className="object-cover" alt="Ranchi Ring Road" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity"></div>
-            <h3 className="absolute bottom-6 left-6 text-white font-bold text-[22px] z-10">Ranchi Ring Road</h3>
-          </div>
-          
-          <div className="min-w-[400px] aspect-[4/3] relative group cursor-pointer shadow-sm">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects3.jpg" fill className="object-cover" alt="Pune-Solapur" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity"></div>
-            <h3 className="absolute bottom-6 left-6 text-white font-bold text-[22px] z-10">Pune-Solapur</h3>
-          </div>
-          
-          <div className="min-w-[400px] aspect-[4/3] relative group cursor-pointer shadow-sm">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects4.jpg" fill className="object-cover" alt="Sikar-Bikaner" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity"></div>
-            <h3 className="absolute bottom-6 left-6 text-white font-bold text-[22px] z-10">Sikar-Bikaner</h3>
-          </div>
-          
-          <div className="min-w-[400px] aspect-[4/3] relative group cursor-pointer shadow-sm">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects5.jpg" fill className="object-cover" alt="Moradabad-Bareilly" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity"></div>
-            <h3 className="absolute bottom-6 left-6 text-white font-bold text-[22px] z-10">Moradabad-Bareilly</h3>
-          </div>
-        </div>
-      </section>
+      <ProjectsCarousel />
 
       {/* Our Clientle */}
       <section className="py-24 px-4 w-full bg-white text-center">
@@ -405,9 +357,9 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="w-full max-w-[1500px] mx-auto overflow-hidden pl-4 md:pl-12">
-          <div className="flex gap-8 overflow-x-auto hide-scrollbar pb-10 pr-12 min-h-[220px] items-center">
-            {clients.map((client, index) => (
+        <div className="w-full max-w-[1500px] mx-auto overflow-hidden">
+          <div className="flex gap-8 w-max animate-[marquee_40s_linear_infinite] hover:[animation-play-state:paused] pb-10 items-center">
+            {[...clients, ...clients].map((client, index) => (
               <div 
                 key={index} 
                 className="min-w-[280px] h-[160px] bg-white rounded-lg shadow-[0_15px_40px_rgba(0,0,0,0.06)] flex items-center justify-center p-8 text-center"

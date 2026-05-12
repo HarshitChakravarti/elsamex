@@ -11,15 +11,14 @@ export default function Home() {
         style={{ backgroundImage: `url('https://emslindia.com/wp-content/uploads/2024/04/banner.png')` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 px-4 md:px-16 lg:px-[10%] max-w-5xl text-white">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-            The Digital Era of Road Maintenance <br />
-            Service
+        <div className="relative z-10 px-4 md:px-16 lg:px-[10%] max-w-3xl text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+            The Digital Era of Road Maintenance Service
           </h1>
-          <p className="text-xl md:text-2xl mb-2 font-bold">
+          <p className="text-base md:text-lg mb-1 font-bold">
             Service: <span className="font-normal">Toll Operations</span>
           </p>
-          <p className="text-xl md:text-2xl mb-10 font-bold">
+          <p className="text-base md:text-lg mb-8 font-bold">
             Length: <span className="font-normal">Lane Kms: 3000+</span>
           </p>
           <Link 
