@@ -226,7 +226,7 @@ export default function Services() {
       {/* Hero Banner Section */}
       <section 
         className="relative w-full h-[600px] flex items-end justify-start bg-cover bg-center"
-        style={{ backgroundImage: `url('https://emslindia.com/wp-content/uploads/2024/04/services-page-header.jpg')`, backgroundColor: '#333' }}
+        style={{ backgroundImage: `url('https://emslindia.com/wp-content/uploads/2024/04/service-page-header.png')`, backgroundColor: '#333' }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
         {/* The Dark Red Box at bottom left */}

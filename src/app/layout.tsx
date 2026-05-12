@@ -69,14 +69,12 @@ export default function RootLayout({
         </div>
 
         {/* Footer */}
-        <footer className="bg-[#f0f0f0] pt-16 pb-8 border-t-[12px] border-secondary">
+        <footer className="bg-primary text-white pt-16 pb-8">
           <div className="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             
-            {/* Column 1: Investor Relations / Logo */}
+            {/* Column 1: Logo & Info */}
             <div className="space-y-6">
-              <h4 className="text-xl font-bold uppercase tracking-wider text-gray-800">INVESTOR RELATIONS</h4>
-              <p className="text-gray-600 font-medium">Committed to improving the available solutions and finding new ones</p>
-              <div className="w-48 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+              <div className="w-48 bg-white p-2 rounded-lg">
                 <Image
                   src="/updatedlogo.png"
                   alt="Elsamex Footer Logo"
@@ -85,69 +83,62 @@ export default function RootLayout({
                   className="w-full h-auto object-contain"
                 />
               </div>
-              <p className="text-sm text-gray-500 leading-relaxed pt-2">
-                EMSL is a wholly owned subsidiary of IL&FS Transportation Networks Ltd. - a
-                major player in the infrastructure development and financing in India for the past
-                25 years.
+              <p className="text-[15px] font-semibold leading-relaxed pr-4 md:pr-0">
+                EMSL is a wholly owned subsidiary of IL&FS
+                Transportation Networks Ltd. - a major player in the
+                infrastructure development and financing in India for
+                the past 25 years.
               </p>
-              <a href="#" className="inline-block text-primary font-bold hover:text-secondary uppercase tracking-widest text-sm border-b-2 border-primary pb-1">Know more</a>
+              <a href="#" className="inline-flex items-center gap-2 font-bold hover:text-gray-200 text-[15px]">
+                <span className="border-b-2 border-white pb-0.5">Know more</span> <span className="text-lg leading-none">↗</span>
+              </a>
             </div>
 
             {/* Column 2: Office */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold uppercase tracking-wider text-gray-800">Office</h4>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 flex-shrink-0 bg-primary rounded-full flex items-center justify-center p-2">
-                    <img src="https://emslindia.com/wp-content/uploads/2024/04/footer-phone.svg" alt="Phone" className="w-full h-full object-contain filter invert" />
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-gray-800 mb-1 text-sm uppercase">CALL US</h5>
-                    <a href="tel:07945878660" className="text-gray-600 hover:text-secondary">07945878660</a>
-                  </div>
+            <div className="space-y-6 md:pl-8">
+              <h4 className="text-[28px] font-bold">Office</h4>
+              <div className="space-y-5">
+                <div className="flex items-center gap-4">
+                  <svg className="w-[18px] h-[18px] flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  <a href="tel:07945878660" className="text-[15px] font-semibold hover:text-gray-200">07945878660</a>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 flex-shrink-0 bg-primary rounded-full flex items-center justify-center p-2">
-                    <img src="https://emslindia.com/wp-content/uploads/2024/04/footer-email.svg" alt="Email" className="w-full h-full object-contain filter invert" />
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-gray-800 mb-1 text-sm uppercase">EMAIL US</h5>
-                    <a href="mailto:info@emslindia.com" className="text-gray-600 hover:text-secondary">info@emslindia.com</a>
-                  </div>
+                <div className="flex items-center gap-4">
+                  <svg className="w-[18px] h-[18px] flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <a href="mailto:info@emslindia.com" className="text-[15px] font-semibold hover:text-gray-200">info@emslindia.com</a>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 flex-shrink-0 bg-primary rounded-full flex items-center justify-center p-2">
-                    <img src="https://emslindia.com/wp-content/uploads/2024/04/footer-address.svg" alt="Phone" className="w-full h-full object-contain filter invert" />
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-gray-800 mb-1 text-sm uppercase">OUR LOCATION</h5>
-                    <p className="text-gray-600 leading-relaxed text-sm">1207 to 1210, Shapath V, S G Highway, Prahladnagar, Ahmedabad, Gujarat - 380015</p>
-                  </div>
+                  <svg className="w-[18px] h-[18px] flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  <p className="text-[15px] font-semibold leading-relaxed">
+                    1207 to 1210, Shapath V, S G Highway, Prahladnagar,
+                    Ahmedabad, Gujarat - 380015
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Column 3: Quick Links */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold uppercase tracking-wider text-gray-800">Quick links</h4>
+            <div className="space-y-6 md:pl-12">
+              <h4 className="text-[28px] font-bold">Quick links</h4>
               <ul className="space-y-4">
-                <li><Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Home</Link></li>
-                <li><Link href="/about-us" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> About us</Link></li>
-                <li><Link href="/projects" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Projects</Link></li>
-                <li><a href="#" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Contact Us</a></li>
+                <li><Link href="/" className="flex items-center gap-3 text-[15px] font-semibold hover:text-gray-200"><span className="w-1.5 h-1.5 rounded-full bg-white"></span> Home</Link></li>
+                <li><Link href="/about-us" className="flex items-center gap-3 text-[15px] font-semibold hover:text-gray-200"><span className="w-1.5 h-1.5 rounded-full bg-white"></span> About us</Link></li>
+                <li><Link href="/contact-us" className="flex items-center gap-3 text-[15px] font-semibold hover:text-gray-200"><span className="w-1.5 h-1.5 rounded-full bg-white"></span> Contact Us</Link></li>
               </ul>
             </div>
             
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 md:px-12 mt-16 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-            <p>© 2026, All Rights Reserved | Elsamex Maintenance Services Limited.</p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="hover:text-secondary">Privacy Policy</a>
-              <a href="#" className="hover:text-secondary">Terms & Conditions</a>
-            </div>
+          <div className="max-w-7xl mx-auto px-4 md:px-12 mt-16 pt-8 border-t border-white/20 text-[14px]">
+            <p>© 2026, All Rights Reserved | Elsamex maintenance Services limited.</p>
           </div>
         </footer>
 

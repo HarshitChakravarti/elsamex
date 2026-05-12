@@ -207,7 +207,7 @@ export default function AboutUs() {
           </div>
 
           {/* Additional Cards Row 2 (Project Management and Contracts) */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:w-3/4 lg:ml-auto lg:-mt-0 mt-6 lg:justify-end">
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 lg:justify-center">
              {/* Card 5 */}
             <div className="bg-white p-8 shadow-[0_15px_40px_rgba(0,0,0,0.08)] rounded h-full">
               <h3 className="text-xl font-bold text-black border-b pb-4 mb-6 leading-tight">Project Management <br /> Services</h3>

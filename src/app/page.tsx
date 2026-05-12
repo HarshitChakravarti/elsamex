@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ProjectsCarousel from "./components/ProjectsCarousel";
 
 export default function Home() {
@@ -21,12 +22,12 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-10 font-bold">
             Length: <span className="font-normal">Lane Kms: 3000+</span>
           </p>
-          <a 
-            href="#" 
+          <Link 
+            href="/about-us" 
             className="inline-flex items-center gap-2 border border-white hover:bg-white hover:text-black text-white font-medium py-3 px-8 transition-colors text-sm rounded-full"
           >
             Know more <span className="text-lg">↗</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -197,10 +198,15 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative w-full h-[500px]">
             <Image src="https://emslindia.com/wp-content/uploads/2025/11/heavy-machinery-used-construction-industry-1.jpg" fill className="object-cover" alt="Digger" />
-            <div className="absolute top-0 right-0 bg-primary/95 p-10 flex flex-col items-center justify-center text-white w-48 h-48 hover:bg-primary transition-colors cursor-pointer cursor-pointer">
+            <a 
+              href="/Company-Profile_EMSL2026.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="absolute top-0 right-0 bg-primary/95 p-10 flex flex-col items-center justify-center text-white w-48 h-48 hover:bg-primary transition-colors cursor-pointer"
+            >
               <img src="https://emslindia.com/wp-content/themes/elsamex/img/download-pdf-icon.svg" alt="PDF" className="w-12 h-12 mb-4" />
               <span className="font-bold text-sm text-center uppercase tracking-wider">DOWNLOAD<br/>PDF</span>
-            </div>
+            </a>
           </div>
           <div className="flex flex-col">
             <h4 className="text-secondary font-bold uppercase tracking-wider text-sm mb-4">INVESTOR RELATIONS</h4>
