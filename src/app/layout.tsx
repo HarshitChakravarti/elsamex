@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,24 +37,24 @@ export default function RootLayout({
 
         {/* Main Navigation */}
         <nav className="bg-white py-4 px-4 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
-          <a href="/" className="w-56 block">
+          <Link href="/" className="w-56 block">
             <Image
-              src="/logo.png"
+              src="/updatedlogo.png"
               alt="Elsamex Logo"
               width={240}
               height={70}
               className="w-full h-auto object-contain"
             />
-          </a>
+          </Link>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center font-bold text-gray-800 text-sm uppercase tracking-wider">
-            <a href="/" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Home</a>
-            <a href="/about-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">About Us</a>
-            <a href="/projects" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Projects</a>
-            <a href="/services" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Services</a>
-            <a href="/career" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Career</a>
-            <a href="/contact-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Contact Us</a>
+            <Link href="/" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Home</Link>
+            <Link href="/about-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">About Us</Link>
+            <Link href="/projects" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Projects</Link>
+            <Link href="/services" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Services</Link>
+            <Link href="/career" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Career</Link>
+            <Link href="/contact-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Contact Us</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,7 +77,13 @@ export default function RootLayout({
               <h4 className="text-xl font-bold uppercase tracking-wider text-gray-800">INVESTOR RELATIONS</h4>
               <p className="text-gray-600 font-medium">Committed to improving the available solutions and finding new ones</p>
               <div className="w-48 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                <img src="/logo.png" alt="Elsamex Footer Logo" className="w-full h-auto" />
+                <Image
+                  src="/updatedlogo.png"
+                  alt="Elsamex Footer Logo"
+                  width={240}
+                  height={70}
+                  className="w-full h-auto object-contain"
+                />
               </div>
               <p className="text-sm text-gray-500 leading-relaxed pt-2">
                 EMSL is a wholly owned subsidiary of IL&FS Transportation Networks Ltd. - a
@@ -126,9 +133,9 @@ export default function RootLayout({
             <div className="space-y-6">
               <h4 className="text-xl font-bold uppercase tracking-wider text-gray-800">Quick links</h4>
               <ul className="space-y-4">
-                <li><a href="/" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Home</a></li>
-                <li><a href="/about-us" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> About us</a></li>
-                <li><a href="/projects" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Projects</a></li>
+                <li><Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Home</Link></li>
+                <li><Link href="/about-us" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> About us</Link></li>
+                <li><Link href="/projects" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Projects</Link></li>
                 <li><a href="#" className="flex items-center gap-2 text-gray-600 hover:text-secondary font-medium"><span className="text-secondary">•</span> Contact Us</a></li>
               </ul>
             </div>

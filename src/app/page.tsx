@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ProjectsCarousel from "./components/ProjectsCarousel";
 
 export default function Home() {
   return (
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
 
           {/* Additional Cards Row 2 */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:w-3/4 lg:ml-auto mt-2 lg:justify-end">
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:w-3/4 lg:mx-auto mt-2">
              {/* Card 5 */}
             <div className="bg-white p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.1)] transition-all rounded">
               <h3 className="text-xl font-bold text-black border-b pb-4 mb-6 leading-tight">Project Management <br /> Services</h3>
@@ -190,45 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Projects Section */}
-      <section className="py-24 w-full bg-primary relative overflow-hidden">
-        <div className="px-4 md:px-[10%] flex justify-between items-end mb-12">
-          <div>
-            <h4 className="text-secondary font-bold uppercase tracking-wider text-sm mb-4">OUR PROJECTS</h4>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">Works Showcase</h2>
-          </div>
-          <div className="flex gap-4">
-            <a href="#" className="hidden md:inline-flex items-center gap-2 border border-white/20 hover:border-white text-white font-medium py-2 px-6 transition-colors text-sm rounded-full">
-              View All <span>↗</span>
-            </a>
-            <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors">
-              &lt;
-            </button>
-            <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors">
-              &gt;
-            </button>
-          </div>
-        </div>
-
-        <div className="pl-4 md:pl-[10%] flex gap-6 overflow-x-auto hide-scrollbar pb-10">
-          <div className="min-w-[300px] md:min-w-[400px] aspect-[4/3] relative group cursor-pointer">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects2.jpg" fill className="object-cover" alt="Ranchi Ring Road" />
-            <h3 className="absolute -bottom-10 left-0 text-white font-bold text-xl">Ranchi Ring Road</h3>
-          </div>
-          <div className="min-w-[300px] md:min-w-[400px] aspect-[4/3] relative group cursor-pointer">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects3.jpg" fill className="object-cover" alt="Pune-Solapur" />
-            <h3 className="absolute -bottom-10 left-0 text-white font-bold text-xl">Pune-Solapur</h3>
-          </div>
-          <div className="min-w-[300px] md:min-w-[400px] aspect-[4/3] relative group cursor-pointer">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects4.jpg" fill className="object-cover" alt="Sikar-Bikaner" />
-            <h3 className="absolute -bottom-10 left-0 text-white font-bold text-xl">Sikar-Bikaner</h3>
-          </div>
-          <div className="min-w-[300px] md:min-w-[400px] aspect-[4/3] relative group cursor-pointer">
-            <Image src="https://emslindia.com/wp-content/uploads/2024/04/our-projects5.jpg" fill className="object-cover" alt="Moradabad-Bareilly" />
-            <h3 className="absolute -bottom-10 left-0 text-white font-bold text-xl">Moradabad-Bareilly</h3>
-          </div>
-        </div>
-      </section>
+      <ProjectsCarousel />
 
       {/* Investor Relations */}
       <section className="py-24 px-4 md:px-[10%] w-full bg-white">
