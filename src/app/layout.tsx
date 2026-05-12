@@ -52,8 +52,8 @@ export default function RootLayout({
             <a href="/about-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">About Us</a>
             <a href="/projects" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Projects</a>
             <a href="/services" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Services</a>
-            <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Career</a>
-            <a href="#" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Contact Us</a>
+            <a href="/career" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Career</a>
+            <a href="/contact-us" className="hover:text-secondary border-b-2 border-transparent hover:border-secondary pb-1 transition-all">Contact Us</a>
           </div>
 
           {/* Mobile Menu Button */}
